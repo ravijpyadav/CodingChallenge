@@ -6,7 +6,6 @@ public class BreakingStick {
 		 int sum = 0;
 		 for (int i = 0; i < a.length; i++) {
 			 long lengthToDevide= a[i];
-			 int multi = 1;
 			if (lengthToDevide == 1){
 				sum+=1;
 			}else{
