@@ -16,10 +16,10 @@ public static void main(String[] args) {
 
 private static int solution(int[] A) {
 
-	Set<Integer> distintLocationList = new HashSet<Integer>();
+	Set<Integer> destList = new HashSet<Integer>();
 	
 	for(int i = 0 ; i< A.length; i++){
-		distintLocationList.add(A[i]);
+		destList.add(A[i]);
 	}
 	
 	int tripId=1;
@@ -32,7 +32,7 @@ private static int solution(int[] A) {
 		List<Integer> trip = new ArrayList<Integer>();
 		for( int j= i ; j < A.length ; j++){
 			trip.add(A[j]);
-			if(containsAll(trip, distintLocationList)){
+			if(containsAll(trip, destList)){
 				trips.put(tripId, trip);
 				tripId++;
 				break;
@@ -50,14 +50,13 @@ private static int solution(int[] A) {
 	return smallestTrip;
 }
 
-private static boolean containsAll(List<Integer> trip,
-		Set<Integer> distintLocationList) {
+	private static boolean containsAll(List<Integer> trip, Set<Integer> destList) {
 
-for (Integer integer : distintLocationList) {
-	if(!trip.contains(integer)){
-		return false;
+		for (Integer integer : destList) {
+			if (!trip.contains(integer)) {
+				return false;
+			}
+		}
+		return true;
 	}
-}
-	return true;
-}
 }
