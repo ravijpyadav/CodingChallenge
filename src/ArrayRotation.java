@@ -2,7 +2,7 @@
 public class ArrayRotation {
 
 	public static void main(String[] args) {
-		int[] a ={3,2,1,4,5};  
+		int[] a ={3,2,1,4,5};
 		
 		int[] rotLeft = rotLeft(a, 2);
 		for (int i = 0; i < rotLeft.length; i++) {
