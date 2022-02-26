@@ -7,7 +7,8 @@ public class BinaryNumber {
 
 		try {
 			Scanner in = new Scanner(System.in);
-			long k = in.nextLong();
+			long k = in.nextLong(); 
+			System.out.println("test");
 			in.close();
 			
 				String binaryStr = Long.toBinaryString(k);
